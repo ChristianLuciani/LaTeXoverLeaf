@@ -1,0 +1,155 @@
+\documentclass[]{article}
+%package
+\usepackage{siunitx}
+\usepackage{mathtools}
+\usepackage{xcolor}
+\usepackage{fancybox}
+\usepackage{tikz-cd}
+\usepackage{tikz}
+%\usetikzlibrary{matrix,decorations.pathmorphing,arrows}
+%opening
+\title{Modelo de Interaci\'on entre Poblaci\'on Migrante y Local}
+\author{Antonio Di Teodoro; Georgina et al}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Esta es una aplicaci\'on de la metodolog\'ia del modelo de Islas y transferencia del conocimiento dentro del marco de clasificaci\'on e intercambio de objetos y dominios no medibles entre la población migrante y la poblaci\'on local . Este modelo se estudia en el contexto especifico de la poblaci\'on  de migrantes paraguayos asentados en la poblaci\'on en el Gran Rosario, Argentina, entre los años ???? y ????.
+\end{abstract}
+
+\section{Introducci\'on}
+
+\section{Visi\'on Global del M\'etodo}
+
+\textcolor{red}{Introducci\'on y justificaci\'on del m\'etodo ...}
+
+\begin{itemize}
+	\item \emph{O.  O.   I.}   \ \  $\xi_{j}$ Para alg\'un   ${j \in N}$
+	\item \emph{E.  I.}  \hspace{1cm} \begin{math} \Omega_{i j} ( \xi_{i}, \xi_{j}, f_{i j}, t_{i j}) \hspace{0.5cm} \forall i , j \in N \end{math}
+	\item Comunidad
+	\begin{equation}
+	\Gamma_k = \bigcup^{k}_{i j \in \{1,\ldots,n\}}\Omega_{i j}
+	\end{equation}
+	donde  $ k \in \{1,\ldots,n\}$ representa el n\'umero de \emph{E I} a unir.
+	\item Si  consideramos $ \hspace{0.5cm} h_I$ el conjunto de hip\'otesis internas, entonces definimos $\Omega_{i j} \cup h_{I_{i j}}$ al espacio de intercambio con h\'ipotesis internas. As\'i la \underline{Comunidad Interna}
+	\begin{equation}
+	\Gamma_{KI}=\bigcup^{K}_{i \in \{1,\ldots,n\}} \Omega_{i j}\cup h_{I_{i j}}
+	\end{equation}
+	Si consideramos $h_\epsilon$ el conjunto de hip\'otesis externa entonce definimos  la comunidad  externa o metacomunidad a la unión de la comunidad interna con el conjunto de hip\'otesis externas; es decir;
+	\begin{equation}
+	C_\epsilon =\mathcal{M} = \Gamma_{KI}\cup h_\epsilon
+	\end{equation}
+	
+\end{itemize}
+
+
+
+\paragraph{Ejemplo}
+$\xi_i$ es igual a la misma clase social $i$: ``Conjunto''. \"Aqu\'i  $\xi_i$ representa una hip\'otesis de entrada $\gamma$ de formulaci\'on del problema\".
+
+El mapa esta dado por
+\begin{eqnarray}
+\xi_i & \overset{f_{i j }}{\longrightarrow} & \xi_i  \\
+a \in \xi_{i} & \longrightarrow & f_{ii}\left(a_{i}\right)
+\end{eqnarray}
+
+as\'i $f_{ii}$ transforma  en s\'i misma la  clase social $i$. \\
+\underline{Notaci\'on:}\hspace{0.2cm} $\displaystyle \xi_i(t_{\xi_{i}}) \longrightarrow \xi_i(t_{\xi_{i}})$ \hspace{0.5cm} $\displaystyle f_{ii}[t_{f_{ii}}]\left( x\right) $\hspace{0.2cm}  donde \hspace{0.2cm} $x\leftarrow\xi_i(t_{\xi_i})$
+
+\subsection{Capa 1 del Modelo}
+\textcolor{red}{Descripci\'on de Capas...}
+
+\begin{equation}
+\xi_i(t_{\xi_i}) \xrightarrow[ ]{f_{ij}\left[ t_{f_{ij}} \right]} \xi_j(t_{ij})
+\end{equation}
+
+\emph{E.I :} ($\xi_i(t_{\xi_i}), \xi_j(\xi_j), f_{ij}[t_{ij}], t_{ij}$)  donde 
+$t_{ij}$ depende de $t_{\xi_i},  t_{\xi_j},  t_{f_{ij}}$
+
+\Ovalbox{
+	\addtolength{\linewidth}{\fboxsep}%
+	\addtolength{\linewidth}{\fboxrule}%
+	\begin{minipage}{\linewidth}
+		\begin{eqnarray*}
+			\boxed{\xi_i(t_{\xi_i})} & \xleftrightarrow[]{f_{ij}\left[t_{f_{ij}}\right] } &\boxed{\xi_j(t_{ij})} \\
+			t_{ij}&  &\Omega_{ij}
+		\end{eqnarray*}
+	\end{minipage}
+}
+
+\paragraph{\underline{Observaci\'on:}}
+\begin{enumerate}
+	\item $\xi_i \cap \xi_j = \emptyset$ \hspace{0.5cm} para \hspace{0.5cm}  $i\neq j$
+	\item Si existe la inversa a $f_{ij}[t_{f_{ij}}]$ la denotaremos por $f_{ji}[t_{f_{ji}}]$\\
+	As\'i existe $f^{-1}_{ij}[t_{f_{ij}}]=f_{ji}[t_{f_{ji}}]$.
+\end{enumerate}
+
+\subsection{Capa 2}
+
+Si hay un solo \emph{EI}  $\Omega_{ij}$; escribimos
+
+\begin{equation*}
+\Gamma_{ij}=\Omega_{ij}
+\end{equation*}
+Para $i=j$ entonces $\Gamma_{ii}=\Omega_{ii}$.
+As\'i $\displaystyle \Omega_{ij}{\overset{F_{ij}}{\longrightarrow}}$ o si $i=j$ $\land$ $k=l$ $\displaystyle \Omega_{ii}{\overset{F_{ik}}{\longrightarrow}}\Omega_{kk}$.\\
+
+
+
+\begin{center}
+	
+\hrulefill
+
+En general\\
+
+\begin{equation*}
+\Gamma_{n_1} \xrightarrow{F_{k_1k_2}} \Gamma_{n_2}
+\end{equation*}
+donde $n_1 , n_2$ identifican la comunidad.\\
+\hrulefill
+\end{center}
+
+
+\paragraph{Ejemplo}
+Considere la  misma clase social  $i$ $\Omega_{ii}$ y la misma  clase social $j$ $ \Omega_{jj}$
+\begin{center}
+	\cornersize{5}
+\Ovalbox{$\Omega_{ii}$} $\xrightarrow{F_{ii}}$ \Ovalbox{$\Omega_{jj}$}
+\end{center}
+\subsection{Capa 1 y Capa 2}
+
+\begin{center}
+\cornersize*{2cm}
+\Ovalbox{\ovalbox{\ovalbox{$\xi_1$}$ \xrightarrow[\Omega_{1 2}=\Gamma_{1 2}]{f_{1 2}}$\ovalbox{$\xi_2$}}$\xrightarrow{F_{1234}}$\ovalbox{\ovalbox{$\xi_3$}$ \xrightarrow[\Omega_{3 4}=\Gamma_{3 4}]{f_{3 4}}$\ovalbox{$\xi_4$}}}
+\end{center}
+
+	
+Observaci\'on creo que no es necesario agregar otra capa. Veamos el siguiente ejemplo.\\
+Considere $\Gamma_2=\Omega_{1 2} \cup \Omega_{3 4}$; $\Gamma_{1 2}=\Omega_{1 2}$
+
+\begin{center}
+	\Ovalbox{$\Gamma_2$\Ovalbox{
+			\ovalbox{$\xi_1$} $\xrightarrow{f_{12}}$ \ovalbox{$\xi_2$}\newline \ovalbox{$\xi_3$} $\xrightarrow{f_{34}}$ \ovalbox{$\xi_4$}}$\xrightarrow{F_{2 1 , 2}}$\Ovalbox{
+			\ovalbox{$\xi_1$} $\xrightarrow{f_{12}}$ \ovalbox{$\xi_2$}}$\Gamma_{1,2}$}
+\end{center}
+finalmente podemos considerar
+\begin{center}
+\begin{tikzcd}[column sep=1pc]
+
+	\ovalbox{$\xi_1$}\arrow{r}{f_{12}} &\ovalbox{ $\xi_2$}\arrow{d}[swap]{f_{23}}&  \arrow{l}[swap]{f_{24}}  \ovalbox{$\xi_4$}\\ & \arrow[dotted]{ur} \ovalbox{ $\xi_3$} &\\
+	\ovalbox{$\xi_5$} \arrow{r}{f_{56}}&\ovalbox{$\xi_6$}
+\end{tikzcd}
+\end{center}
+Considerando $\Omega_{11}$;  $\Omega_{12}$; $\Omega_{23}$;  $\Omega_{34}$  y  $\Omega_{56}$. \\
+Si existe $f_{43}$ podemos definir $\Omega_{43}$
+\begin{eqnarray*}
+	\Gamma_3 & =& \Omega_{11}\cup \Omega{12} \cup \Omega_{23}\\
+	\Gamma_2 &=& \Omega_{34} \cup \Omega_{56}
+\end{eqnarray*}
+
+\begin{tikzcd}
+	\Ovalbox{\ovalbox{$\xi_1$}}}
+\end{tikzcd}	
+\end{document}
