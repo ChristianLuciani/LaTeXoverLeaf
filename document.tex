@@ -148,8 +148,24 @@ Si existe $f_{43}$ podemos definir $\Omega_{43}$
 	\Gamma_3 & =& \Omega_{11}\cup \Omega{12} \cup \Omega_{23}\\
 	\Gamma_2 &=& \Omega_{34} \cup \Omega_{56}
 \end{eqnarray*}
+\newpage 
 
+\Ovalbox{
 \begin{tikzcd}
-	\Ovalbox{\ovalbox{$\xi_1$}}}
+\ovalbox{$\xi_1$}\arrow[bend left]{r}{f_{11}}   & \ovalbox{$\xi_1$}\arrow[bend left]{d}{f_{12}}\\&\ovalbox{$\xi_2$} \arrow[bend right]{d}[swap]{f_{23}}\\& \ovalbox{$\xi_3$}	\\
+\Gamma_3
 \end{tikzcd}	
+}
+\begin{tikzcd}
+.\arrow[bend left]{r}{\Gamma_{23}}&.
+\end{tikzcd}
+%$\xrightarrow{\Gamma_{23}}$
+\Ovalbox{
+	\begin{tikzcd}
+		\ovalbox{$\xi_3$}\arrow[bend left]{rd}{f_{34}}&\\
+		&\ovalbox{$\xi_4$}\\
+		\ovalbox{$\xi_5$} \arrow[bend left]{rd}{f_{56}}&\\
+		\Gamma_2& \ovalbox{$\xi_6$}
+	\end{tikzcd}
+}
 \end{document}
