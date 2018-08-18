@@ -6,6 +6,7 @@
 \usepackage{fancybox}
 \usepackage{tikz-cd}
 \usepackage{tikz}
+\usepackage{enumitem}
 %\usetikzlibrary{matrix,decorations.pathmorphing,arrows}
 %opening
 \title{Modelo de Interaci\'on entre Poblaci\'on Migrante y Local}
@@ -122,7 +123,7 @@ Considere la  misma clase social  $i$ $\Omega_{ii}$ y la misma  clase social $j$
 
 \begin{center}
 \cornersize*{2cm}
-\Ovalbox{\ovalbox{\ovalbox{$\xi_1$}$ \xrightarrow[\Omega_{1 2}=\Gamma_{1 2}]{f_{1 2}}$\ovalbox{$\xi_2$}}$\xrightarrow{F_{1234}}$\ovalbox{\ovalbox{$\xi_3$}$ \xrightarrow[\Omega_{3 4}=\Gamma_{3 4}]{f_{3 4}}$\ovalbox{$\xi_4$}}}
+\Ovalbox{\ovalbox{\ovalbox{$\xi_1$}$ \xrightarrow[\Omega_{1 2}=\Gamma_{1 2}]{f_{1 2}}$\ovalbox{$\xi_2$}}$\xrightarrow{\mathcal{F}_{1234}}$\ovalbox{\ovalbox{$\xi_3$}$ \xrightarrow[\Omega_{3 4}=\Gamma_{3 4}]{f_{3 4}}$\ovalbox{$\xi_4$}}}
 \end{center}
 
 	
@@ -131,7 +132,11 @@ Considere $\Gamma_2=\Omega_{1 2} \cup \Omega_{3 4}$; $\Gamma_{1 2}=\Omega_{1 2}$
 
 \begin{center}
 	\Ovalbox{$\Gamma_2$\Ovalbox{
-			\ovalbox{$\xi_1$} $\xrightarrow{f_{12}}$ \ovalbox{$\xi_2$}\newline \ovalbox{$\xi_3$} $\xrightarrow{f_{34}}$ \ovalbox{$\xi_4$}}$\xrightarrow{F_{2 1 , 2}}$\Ovalbox{
+			\begin{tikzcd}
+				\ovalbox{$\xi_1$} \arrow{r}{f_{12}}& \ovalbox{$\xi_2$}\\
+						 \ovalbox{$\xi_3$} \arrow{r}{f_{34}}&\ovalbox{$\xi_4$}
+		\end{tikzcd}
+}$\xrightarrow{\mathcal{F}_{2 1 , 2}}$\Ovalbox{
 			\ovalbox{$\xi_1$} $\xrightarrow{f_{12}}$ \ovalbox{$\xi_2$}}$\Gamma_{1,2}$}
 \end{center}
 finalmente podemos considerar
@@ -155,8 +160,7 @@ Si existe $f_{43}$ podemos definir $\Omega_{43}$
 \ovalbox{$\xi_1$}\arrow[bend left]{r}{f_{11}}   & \ovalbox{$\xi_1$}\arrow[bend left]{d}{f_{12}}\\
 &\ovalbox{$\xi_2$} \arrow[bend right]{d}[swap]{f_{23}}\\
 \Gamma_3& \ovalbox{$\xi_3$}	
-\end{tikzcd}	
-}
+\end{tikzcd}	}
 \begin{tikzcd}
 .\arrow[bend left]{r}{\mathcal{F}_{23}}&.
 \end{tikzcd}
@@ -169,4 +173,99 @@ Si existe $f_{43}$ podemos definir $\Omega_{43}$
 	\end{tikzcd}
 }
 \end{center}
+
+\hrulefill 
+\subsection{No Agonistico Asimetr\'ia:}
+\subsubsection{Problema Construcci\'on}
+Considere los siguientes espacios de intercambio: \\
+
+\begin{eqnarray*}
+		\xi_1(t_{\xi_1})&=& \text{Ayudante set}\\
+		\xi_2(t_{\xi_2})&=& \text{Medio oficial}\\
+		\xi_3(t_{\xi_3})&=& \text{Oficial Especializado}\\
+		\xi_4(t_{\xi_4})&=& \text{Contratista}\\
+\end{eqnarray*}
+\\
+\emph{\underline{\text{CASO 1:}}}\\
+Si la \textbf{ \textit{misma condici\'on megratoria} )mcs)} y la \textbf{ \textit{misma condici\'on socioecon\'omica} (mcs)} son objetos de organizaci\'on jerarquica entonces
+\begin{eqnarray*}
+	\xi_5(t_{\xi_5})&=&\text{mcm}\\
+	\xi_5^c(t_{\xi_5})&=&\text{No-mcm}\\
+	\xi_6(t_{\xi_6})&=&\text{mcs}\\
+	\xi_6^c(t_{\xi_6})&=&\text{No-mcs}\\
+\end{eqnarray*} 
+\emph{Definimos un espacion de intercambio:}\\
+\begin{equation}
+	\Omega_{ij} = \left( \xi_i (t_{\xi_i} ), \xi_j (t_{\xi_j}), f_{ij}(t_{f_{ij}}), t_{ij} \right) \hspace{0.5cm} \forall i, j \in \{1,\dots,6\}
+\end{equation}
+Por ejemplo el caso ayudante y $\xi_k(t_k)=\xi_k$ con $t_{\xi_k}\rightarrow \infty$
+\begin{equation}
+	\Omega_{11}\xrightarrow{F_{11}[t_{f_{11}}]}\Omega_{11}
+\end{equation}
+El espacio de intercambio \textit{EI} $\Omega_{11} (\xi_1, \xi_1, f[t_{f_{11}}], t_11)$. La comunidad del ayudantes con \textbf{mcm} esto dado por 
+\begin{equation}
+	\Omega_{11} \cup \Omega_{55} \cup \Omega_15 = \Gamma_{15}
+\end{equation} 
+\begin{center}
+\Ovalbox{
+\begin{tikzcd}
+	&\xi_1\arrow[bend left]{r}{}&\xi_5 \arrow[bend left]{dr}\\
+	\xi_1\arrow[bend left]{ur}&&&\xi_5
+\end{tikzcd}}
+\end{center}
+
+donde 
+\begin{eqnarray}
+	\Omega_{11}&=& \left(  \xi_1(t_{\xi_1}), \xi_1(t_{\xi_1}), f_{11}( t_{11}), t_{11} \right)\\
+	\Omega_{55}&=& \left(  \xi_5(t_{\xi_5}), \xi_5(t_{\xi_5}), f_{55}(t_{55}), t_{55} \right)\\
+	\Omega_{15}&=& \left(  \xi_1(t_{\xi_1}), \xi_5(t_{\xi_5}), f_{15}(t_{15}), t_{15} \right)
+\end{eqnarray}
+As\'i podemos establecer intercambios 
+\begin{equation}
+	\Gamma_1 \xrightarrow{{\mathcal{\tilde{F}}_{11}}}\Gamma_1
+\end{equation}
+Note que con nuestro modelo se puede establecer intercambios
+
+\begin{itemize}[label=$\mapsto$]
+\item \text{Ayudante} $\longrightarrow$ \text{Ayudante} \\
+\item  \text{\textbf{mcm}} $\longrightarrow$ \text{\textbf{mcm}}\\
+\item  \text{ Ayudante  y \textbf{mcm}} $\longrightarrow$  \text{Ayudante y/o \textbf{mcm}}\\
+\item  \text{ Ayudante  \'o \textbf{mcm}}$\longrightarrow$ \text{ Ayudante y/o \textbf{mcm}}
+\end{itemize}
+Note que no es lo mismo $\Omega_{15}$ que $\Omega_{51}$ \\
+Usando composici\'on podemos definir los cambios de estados como
+\begin{equation}
+	\begin{tikzcd}
+		\Omega_{11}\arrow[bend right]{rrr}[swap]{\mathcal{F}_{1144}}\arrow{r}{\mathcal{F}_{1122}}&\Omega_{22}\arrow{r}{\mathcal{F}_{2233}}&\Omega_{33}\arrow{r}{\mahtcal{F}_{3344}}&\Omega_{44}
+	\end{tikzcd}
+\end{equation}
+Ojo si $\mathcal{F}_{1122}$ es un intercambio directo entonce $\mathcal{F}_{2211}$ es un intercambio inverso
+\begin{equation}
+	\begin{tikzcd}
+	\Omega_{11}\arrow[bend left]{r}{\mathcal{F}_{1122}}\arrow{r}&\Omega_{22}\arrow[bend left]{l}{\mathcal{F}_{2211}}
+	\end{tikzcd}
+\end{equation} 
+mapa -(ayudante-oficial )
+\begin{eqnarray*}
+	\Omega_{11}&\longrightarrow&\text{Transforma}\longrightarrow\Omega_{22}\\
+	\text{Ayudante}&\longrightarrow&\mathcal{F}_{1122}\text{(Ayudante)}=\text{medio-oficial}
+\end{eqnarray*}
+Ls comunidad con estarus est\'a dada por 
+\begin{equation}
+\Gamma_2=\Omega_{11}\cup \Omega_{22} \cup \Omega_{33} \cup \Omega_{44} \cup \Omega_{55} \cup \Omega_{66}\cup \bigcup_{i<j} \Omega_{ij} \hspace{0.3cm}\text{con}\hspace{0.3cm} i,j \in \{1,\dots,6\}
+\end{equation}
+Se puede definir una comunidad de \textbf{ayudantes} m\'as \textbf{medio oficial} m\'as \textbf{mcm} m\'as \textbf{mcs}
+\begin{equation}
+\Gamma_3=\Omega_{11}\cup\Omega_{21}\cup\Omega_{55}\cup\Omega_{66}
+\end{equation}
+y podemos establecer intercambios 
+\begin{equation*}
+\Gamma_2\xrightarrow{\tilde{\mathcal{F}}_{23}}\Gamma_3
+\end{equation*}
+Observe 	que 
+\begin{eqnarray*}
+\text{si }\hspace{0.3cm}\Omega_{11}&\longrightarrow&\Omega_{22}\hspace{0.3cm} \text{ usamos } \hspace{0.3cm}\mathcal{F}_{12}\\
+\text{si}\hspace{0.6cm}\Gamma_1&\longrightarrow&\Gamma_{3}\hspace{0.5cm} \text{ usamos }\hspace{0.3cm} \tilde{\mathcal{F}}_{13}
+\end{eqnarray}
+
 \end{document}
