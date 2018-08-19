@@ -235,9 +235,12 @@ Note que con nuestro modelo se puede establecer intercambios
 Note que no es lo mismo $\Omega_{15}$ que $\Omega_{51}$ \\
 Usando composici\'on podemos definir los cambios de estados como
 \begin{equation}
-	\begin{tikzcd}
-		\Omega_{11}\arrow[bend right]{rrr}[swap]{\mathcal{F}_{1144}}\arrow{r}{\mathcal{F}_{1122}}&\Omega_{22}\arrow{r}{\mathcal{F}_{2233}}&\Omega_{33}\arrow{r}{\mahtcal{F}_{3344}}&\Omega_{44}
-	\end{tikzcd}
+\begin{tikzcd}
+\Omega_{11} \arrow[bend right]{rrr}[swap]{\mathcal{F}_{1144}} \arrow{r}{\mathcal{F}_{1122}}
+&\Omega_{22}\arrow{r}{\mathcal{F}_{2233}}
+&\Omega_{33} \arrow{r}{\mathcal{F}_{3344}}
+&\Omega_{44}
+\end{tikzcd}
 \end{equation}
 Ojo si $\mathcal{F}_{1122}$ es un intercambio directo entonce $\mathcal{F}_{2211}$ es un intercambio inverso
 \begin{equation}
@@ -250,7 +253,7 @@ mapa -(ayudante-oficial )
 	\Omega_{11}&\longrightarrow&\text{Transforma}\longrightarrow\Omega_{22}\\
 	\text{Ayudante}&\longrightarrow&\mathcal{F}_{1122}\text{(Ayudante)}=\text{medio-oficial}
 \end{eqnarray*}
-Ls comunidad con estarus est\'a dada por 
+Ls comunidad con estatus est\'a dada por 
 \begin{equation}
 \Gamma_2=\Omega_{11}\cup \Omega_{22} \cup \Omega_{33} \cup \Omega_{44} \cup \Omega_{55} \cup \Omega_{66}\cup \bigcup_{i<j} \Omega_{ij} \hspace{0.3cm}\text{con}\hspace{0.3cm} i,j \in \{1,\dots,6\}
 \end{equation}
@@ -266,6 +269,39 @@ Observe 	que
 \begin{eqnarray*}
 \text{si }\hspace{0.3cm}\Omega_{11}&\longrightarrow&\Omega_{22}\hspace{0.3cm} \text{ usamos } \hspace{0.3cm}\mathcal{F}_{12}\\
 \text{si}\hspace{0.6cm}\Gamma_1&\longrightarrow&\Gamma_{3}\hspace{0.5cm} \text{ usamos }\hspace{0.3cm} \tilde{\mathcal{F}}_{13}
-\end{eqnarray}
-
+\end{eqnarray*}
+\emph{\underline{\text{CASO 2:}}}\\
+Si la misma condici\'on migratoria (\textbf{mcm}) y la misma condici\'on socio-econ\'omica (\textbf{mcs}) son ahora \emph{hip\'otesis internas} entoces:\\
+\emph{Ejemplo}\\
+Considere $h_1=$\textbf{mcm};  $h_2=$\textbf{mcs} y  los espacios de intercambios $\Omega_{11}$ (ayudantes ) y $\Omega_{22}$ (medio-oficial) as\'i
+\begin{eqnarray}
+	\Gamma_{1h_1}&=&\Omega_{11} \cup h_1 =\text{ayudantes y \textbf{mcm}} \\
+	\Gamma_{2h2}&=&\Omega_{22} \cup h_2 =\text{medio  oficial y \textbf{mcs} }    
+\end{eqnarray}  
+As\'i definimos los intercambios entre las dos comunidades internas
+\begin{equation}
+ 	\Gamma_{1h1}\xrightarrow{\tilde{\mathcal{F}}_{12}} \Gamma_{2 h_2}
+\end{equation}
+As\'i existe un intercambio entre ayudante m\'as \textbf{mcm} y medio oficial m\'as \textbf{mcs}. Note que este caso permite una manipulaci\'on distinta de \textbf{mcm} y \textbf{mcs} por lo que permita restructurar el el modelo seg\'un el estudio que se este realizando. Note que \textbf{mcm} y \textbf{mcs} aunque en este ejemplo son hip\'otesis deformativas. \\
+ 
+Un ejemplo de hip\'otesis din\'amica puede ocurrir si :\\
+\underline{Consideramos}:
+\begin{equation}
+\Omega_{11}\xrightarrow{\mathcal{F}_{11}} \Omega_{11}
+\end{equation}
+\begin{equation*}
+\begin{tikzcd}
+\ovalbox{$\xi_1$}\arrow{rr}{f_{11}}&\arrow{d}{\mathcal{F}_{11}}&\ovalbox{$\xi_1$}&\Omega_{11}\\
+\ovalbox{$\xi_1$}\arrow{rr}[swap]{f_{11}}&{}&\ovalbox{$\xi_1$}&\Omega_{11}
+\end{tikzcd}
+\end{equation*}
+\begin{eqnarray*}
+\text{Considera}\hspace{0.5cm}  G_{1}&=&\text{Grupo de ayudantes} 1\\
+ 								  G_{2}&=&\text{Grupo de ayudantes} 2\\
+ 								  f_{11}&=&\begin{cases}
+ 								  	G_1\text{si estamos trabajando}\\
+ 								  	G_2\text{en el descanso}
+ 								  \end{cases}
+\end{eqnarray*}
+Note que $f_{11}$ no deforma $\Omega_{11}$. A diferencia de considerar sobre todos los ayudantes la misma condici\'on migratoria por ejemplo. 
 \end{document}
