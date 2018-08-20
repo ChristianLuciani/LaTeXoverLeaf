@@ -6,6 +6,7 @@
 \usepackage{fancybox}
 \usepackage{tikz-cd}
 \usepackage{tikz}
+\usetikzlibrary{positioning}
 \usepackage{enumitem}
 %\usetikzlibrary{matrix,decorations.pathmorphing,arrows}
 %opening
@@ -187,7 +188,7 @@ Considere los siguientes espacios de intercambio: \\
 \end{eqnarray*}
 \\
 \emph{\underline{\text{CASO 1:}}}\\
-Si la \textbf{ \textit{misma condici\'on megratoria} )mcs)} y la \textbf{ \textit{misma condici\'on socioecon\'omica} (mcs)} son objetos de organizaci\'on jerarquica entonces
+Si la \textbf{ \textit{misma condici\'on megratoria} (mcs)} y la \textbf{ \textit{misma condici\'on socioecon\'omica} (mcs)} son objetos de organizaci\'on jerarquica entonces
 \begin{eqnarray*}
 	\xi_5(t_{\xi_5})&=&\text{mcm}\\
 	\xi_5^c(t_{\xi_5})&=&\text{No-mcm}\\
@@ -286,9 +287,11 @@ As\'i existe un intercambio entre ayudante m\'as \textbf{mcm} y medio oficial m\
  
 Un ejemplo de hip\'otesis din\'amica puede ocurrir si :\\
 \underline{Consideramos}:
+
 \begin{equation}
 \Omega_{11}\xrightarrow{\mathcal{F}_{11}} \Omega_{11}
 \end{equation}
+\\
 \begin{equation*}
 \begin{tikzcd}
 \ovalbox{$\xi_1$}\arrow{rr}{f_{11}}&\arrow{d}{\mathcal{F}_{11}}&\ovalbox{$\xi_1$}&\Omega_{11}\\
@@ -303,5 +306,128 @@ Un ejemplo de hip\'otesis din\'amica puede ocurrir si :\\
  								  	G_2\text{en el descanso}
  								  \end{cases}
 \end{eqnarray*}
-Note que $f_{11}$ no deforma $\Omega_{11}$. A diferencia de considerar sobre todos los ayudantes la misma condici\'on migratoria por ejemplo. 
+Note que $f_{11}$ no deforma $\Omega_{11}$. A diferencia de considerar sobre todos los ayudantes la misma condici\'on migratoria por ejemplo. \\
+
+\emph{\underline{\text{CASO 3:}}}\\
+
+Si la misma condici\'on migratoria (\textbf{mcm}) y la misma condici\'on socio-econ\'omica (\textbf{mcs}) son ahora \emph{hip\'otesis externas}.\\
+
+\emph{Ejemplo}: supongamos que $h_\epsilon=$ mismo origen nacional, y considere $\Gamma_1=\Omega_{11}\cup\Omega_{22}$.
+
+\begin{equation}
+C_{\epsilon_1}=\Gamma_1\cup h_\epsilon
+\end{equation}
+
+Note que aqu\'i tenemos a los ayudantes m\'as medio oficial con el mismo origen nacional. Observe la siguiente diferencia, si consideramos $h_\epsilon$ como una hip\'otesis interna (mismo origen nacional es este caso) tenemos $\Omega_{11}\cup h_\epsilon$. Ayudantes $\oplus$ mismo origen nacional (Argentina). Medio oficial $\Omega_{22}\cup h_\epsilon \oplus$ mismo origen nacional (Venezuela).\\
+
+\emph{Ejemplo}: Considere
+\begin{eqnarray*}
+\xi_1(t_{\xi_1})&=&\text{misma clase social, } \bullet t_{\xi_1} \text{tiempo de duraci\'on de la misma clase social (\textbf{mcs}).}\\
+\xi_2(t_{\xi_2})&=&\text{misma condici\'on migrante }\bullet t_{\xi_2} \text{ pues la condici\'on migrante puede cambiar (\textbf{mcm})}.\\
+\xi_3(t_{\xi_3})&=&\text{origen nacional (\textbf{mon})}.
+\end{eqnarray*} 
+Si la clase social se mantiene en el tiempo entonces: $t_{\xi_1}\longrightarrow\infty$ y $\xi_1(t_{\xi_1})=\xi_1$. Si la condici\'on migratoria se mantiene en el tiempo $(t_{\xi_2}\longrightarrow\infty)$ y $\xi_2(t_{\xi_2})=\xi_2$. Uno puede suponer que existen todos los intercambios posibles los mapas quedan como:\\ \\
+
+\begin{center}
+\begin{tikzcd}
+	f_{11}^{-1},  f_{11}& { }\arrow[loop  left] \xi_1\arrow[<->]{rr}{f_{12}}[swap]{f_{21}} \arrow[<->]{rrdd}{f_{11}}[swap]{f_{13}}&&\arrow[loop  right]  \xi_2\arrow[<->]{dd}{f_{32}}[swap]{f_{23}}&f_{22}, f_{22}^{-1}\\ \\
+	&&&\xi_3\arrow[loop  right] &f_{33}, f_{33}^{-1}&
+\end{tikzcd}
+\end{center}
+
+Podemos construir todos los espacios de intercambios \emph{E.I} $\Omega_{ij}=(\xi_i(t_{\xi_i}), \xi_j(t_i), f_{ij}(t_{f_ij}), t_{ij} )$, por ejemplo los \emph{E.I.} con \emph{mcs} esta dado por  
+\begin{equation*}
+\Omega_{11}=(\xi_1(t_{\xi_1}), \xi_1(t_{\xi_1}), f_{11}(t_{f_{11}}), t_{11})
+\end{equation*}
+
+La Comunidad  esta dada por:
+\begin{equation*}
+\Gamma_1=\bigcup_{ij\in\{1,\dots,3\}} \Omega{ij}
+\end{equation*}
+\\
+\begin{center}
+$\Gamma_1$\\
+\Ovalbox{
+\begin{tikzcd}
+\Omega_{11}&&\Omega_{12},\hspace{0.1cm}\Omega_{21}&&\Omega_{22}\\
+	\ovalbox{$\xi_1$}\arrow[<->]{r}{}&\ovalbox{$\xi_1$}\arrow[<->]{rr}\arrow[<->]{rd}&&	\ovalbox{$\xi_2$}\arrow[<->]{r}\arrow[<->]{ld}&\ovalbox{$\xi_2$}\\
+	&\Omega_{31},\hspace{0.1cm} \Omega_{13}&\hspace{0.1cm}\ovalbox{$\xi_3$}\arrow[<->]{d}&\Omega_{23},\hspace{0.1cm} \Omega_{32}&\\
+	&&\ovalbox{$\xi_3$}&\Omega_{33}&
+\end{tikzcd}}\\
+\end{center}
+Podemos as\'i definir/construir\\
+\begin{equation}
+\Gamma_1 \xrightarrow{\mathcal{F}_{11}} \Gamma_1
+\end{equation}
+$\mathcal{F}$ representa la recomendaci\'on de trabajadores dentro de $\Gamma_1.$
+\subsubsection{Modelo con hip\'otesis internas}
+Consideran la hip\'otesis adicional (interna) deformativa $h_1$ dada por $h_1$:raza de color blanco independiente del tiempo.\\
+\emph{\underline{Ejemplo}}: Si consideramos: 
+\begin{equation*}
+\Omega_{11}\cup \Omega_{22} \cup h_1 = \text{mcs} + \text{mcm} + h_1
+\end{equation*}
+\emph{\underline{Ejemplo}}: Si consideramos $h_2'=$ Argentina y $h_2''=$Italia
+\begin{eqnarray*}
+\Omega_{33}\cup h_1\cup h_2' \text{  y  } \Omega_{33}\cup h_1 \cup h_2''\\
+\text{mon+blancos+argentina// mon + blancos + Italia}   
+\end{eqnarray*}
+\hrulefill\\
+
+Considerando ahora la hip\'otesis adicional din\'amica $h_3=$ te recomiendo por que alguien me dijo que te recomendara \'o te recomiendo en el tiempo en que trabajaste conmigo.\\
+As\'i podemos tener 
+\begin{equation*}
+\Omega_{11}\cup h_1\cup h_3 
+\end{equation*}
+\textbf{mcs} $\oplus$  blanco $\oplus$ te recomiendo por que alguien me lo pidio.\\
+Pdemos considerar
+\begin{equation*}
+\Gamma_{2}=\Omega_{11}\cup h_3\cup\Omega_{22}\cup h_1 
+\end{equation*}
+\textbf{mcs} $\oplus$  me pidieron que te recomendara $\cup$ \textbf{mcm}$\oplus$blanco.\\
+Diferencias entre 
+\begin{equation*}
+\Omega_{11}\cup\Omega{12} \text{ va } \Omega_{12}
+\end{equation*}
+\\
+\begin{equation*}
+\Omega_{11}\cup \Omega_{22}=
+\Ovalbox{
+\begin{tikzcd}
+\ovalbox{$\xi_1$}\arrow{r}{f_{11}}&\ovalbox{$\xi_1$}\\
+\ovalbox{$\xi_2$}\arrow{r}{f_{22}}&\ovalbox{$\xi_2$}
+\end{tikzcd}}
+\hspace{0.3cm}\Gamma_2
+\end{equation*}
+\\
+\begin{equation*}
+\Omega_{12} \hspace{0.3cm}
+\Ovalbox{
+	\begin{tikzcd}
+	\ovalbox{$\xi_1$}\arrow{r}&\ovalbox{$\xi_2$}
+	\end{tikzcd}}
+\end{equation*}
+En $\Omega_{11} \cup \Omega_{22}$ no hay intercacci\'on entre $\xi_1$ con $\xi_2$ mientras que en $\Omega_{12}$ si lo hay.\\
+\emph{\underline{Comunidad Externa}:}  recordemos $\displaystyle \Gamma_1=\bigcup_{i,j\in \{1,2,3\}}\Omega{ij}$
+Usando $h_1=$blancos
+\begin{eqnarray*}
+&C_\epsilon=\Gamma_1\cup h_1\\
+&\text{mcm$\oplus$ mcs$\oplus$mon$\oplus$blancos}
+\end{eqnarray*}
+tambi\'en podemos considerar
+\begin{eqnarray*}
+\Gamma_{31}&=&\Omega_{11}\cup \left(\Omega_{11}\cup h_1\right) \\
+&& \text{mcs $\oplus$ [mcm $\oplus$ blancos]}
+\end{eqnarray*}
+Considere $h_2=$ argentinos (hip\'otesis externa)
+\begin{eqnarray*}
+	C_{\epsilon_2}&=&\Gamma_{31}\cup  h_2 \\
+	& &\text{mcs $\oplus$ mcm $\oplus$ blancos}
+\end{eqnarray*}
+\emph{Observaci\'on:} Como la hip\'otesis internas son aplicables solo  a $\Omega_{ij}$ 
+\begin{tikzcd}
+	\text{mcs}&\hspace{-1.5cm}\oplus (& \hspace{-1.8cm}\text{mcm}&\hspace{-1.8cm}\oplus&\hspace{-1.5cm}\text{blancos})\\{}&{}&{}&\vspace{-2cm}\arrow[bend left]{ll}[swap]{.}{}
+\end{tikzcd}
+blancos es solo aplicable a los mcm
 \end{document}
+
+
